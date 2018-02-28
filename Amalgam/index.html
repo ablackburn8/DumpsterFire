@@ -2,14 +2,55 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>tpircSavaJ</title>
+<title>mainpage</title>
 <link href="mainstyle.css" rel="stylesheet" type="text/css">
 <script src= "beetroot.js"></script>
+
+<script>
+	
+	function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user = getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+        user = prompt("Please enter your name:", "");
+        if (user != "" && user != null) {
+            setCookie("username", user, 365);
+        }
+    }
+}
+	</script>
+	
+	
+	
 </head>
 
-<body onLoad="alert('GREETINGS')" onUnload="alert('You can check out any time you like, but you can never leave.')">
+<body onLoad="checkCookie()">
+
 <div id="container">
-	<header>Alexander Blackburn</header>
+	<header>MarbleTart</header>
 	<nav>
 			<form>
 		<input type="button" value="Clicky" onClick="alert('clickity-doo-dah')"/>
@@ -20,10 +61,11 @@
 	</nav>
 	
 	<section>
-		<a href="https://www.starcadet.com/" onMouseOver="alert('Welcome to the Hotel California / Such a lovely place (such a lovely place) / Such a lovely face / Plenty of room at the Hotel California / Any time of year (any time of year) you can find it here')">WELCOME</a>
-		<p class="about">My name is Alexander Blackburn. I like many kinds of genres, but I like very specific kinds of stories inside those genres. For example, my favorite genre of anything (be it a movie, book, comic, etc.) is "A group of friends hang out over the summer and discover strange things happening in their small hometown."</p>
+		<a href="https://www.starcadet.com/" onMouseOver="alert('Lorem ipsum dolor sit amet, consectetur adipisicing elit.">WELCOME</a>
+		<p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quidem dolores aperiam laudantium ex numquam repellat libero inventore saepe doloremque ipsam vero, expedita pariatur in iure aliquam ducimus, eveniet et. Praesentium minus molestias exercitationem delectus.</p>
 		<p class="photos"></p>
 		<p class="contact"></p>
+		<div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, animi.</div>
 	</section>
 </div>
 </body>
