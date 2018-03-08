@@ -16,36 +16,27 @@ header{
 	margin:10px;
 	padding:10px;
 	background-color:springgreen;
-	text-align:center;
+	text-align: center;
+	align-content:center;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	font-size:28pt;
+	font-size:10pt;
 	box-shadow: 0px 4px 10px black;
-}
-
-nav{
-	height:auto;
-	min-height:500px;
-	width:100px;
-	border-radius: 5px 5px 5px 5px;
-	margin:10px;
-	padding:10px;
-	background-color:springgreen;
-	text-align:center;
-	box-shadow: 0px 4px 10px black;
-	font-size:16pt;
-	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	float:left;
 }
 
 section{
 	height:auto;
-	width:780px;
+	width:925px;
 	background-color:springgreen;
 	box-shadow: 0px 4px 10px black;
 	border-radius: 5px 5px 5px 5px;
 	margin:10px;
-	padding:10px;
+	padding:20px;
 	float:left;
-	font-size: 1em;
+	font-size: 2em;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+.hide{
+	display: none;
 }

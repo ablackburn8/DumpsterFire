@@ -4,69 +4,22 @@
 <meta charset="utf-8">
 <title>mainpage</title>
 <link href="mainstyle.css" rel="stylesheet" type="text/css">
-<script src= "beetroot.js"></script>
-
-<script>
-	
-	function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
-function checkCookie() {
-    var user = getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 365);
-        }
-    }
-}
-	</script>
-	
-	
-	
 </head>
 
-<body onLoad="checkCookie()">
-
+<body>
 <div id="container">
-	<header>MarbleTart</header>
-	<nav>
-			<form>
-		<input type="button" value="Clicky" onClick="alert('clickity-doo-dah')"/>
-		</form>
-			<p>About</p>
-			<p>Photos</p>
-			<p>Contact</p>
-	</nav>
-	
+	<header>'tis I, the frenchiest fry</header>
 	<section>
-		<a href="https://www.starcadet.com/" onMouseOver="alert('Lorem ipsum dolor sit amet, consectetur adipisicing elit.">WELCOME</a>
-		<p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quidem dolores aperiam laudantium ex numquam repellat libero inventore saepe doloremque ipsam vero, expedita pariatur in iure aliquam ducimus, eveniet et. Praesentium minus molestias exercitationem delectus.</p>
-		<p class="photos"></p>
-		<p class="contact"></p>
-		<div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, animi.</div>
+		<ul>
+			<li><a id="films" href="#">FILMS</a></li>
+			<li><a id="books" href="#">BOOKS</a></li>
+			<li><a id="comics" href="#">COMICS</a></li>
+		</ul>
+	<p class="hide" id="filmstext">The Dark Crystal | Summer Wars | Big Fish | Moonrise Kingdom | The Last Mimzy</p>
+	<p class="hide" id="bookstext">Kids of Appetite | Greenglass House | Paper Towns | The Outsiders | The Little Prince | Into the Wild</p>
+	<p class="hide" id="comicstext">Bone | Seconds | Lost at Sea | Barbarous | Kiwi Blitz</p>
 	</section>
 </div>
 </body>
+<script src= "beetroot.js"></script>
 </html>
