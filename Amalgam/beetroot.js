@@ -21,18 +21,7 @@ comics.addEventListener("click", function(){
 	if(comicstext.className === "hide"){
 		comicstext.className = "";
 	}else {comicstext.className = "hide";}
-});
-
-//films.addEventListener("click", linkThing(){
-//books.addEventListener("click", linkThing(){
-//comics.addEventListener("click", linkThing(){
-//						
-//function linkThing(){
-//	console.log(this);
-//	var
-//}						
-						
-						
+});	
 						
 						
 						
