@@ -9,22 +9,20 @@
 <body>
 	<header>his name is Snart</header>
 	<section>
-		<div id="moveable" style="height:45px; width: 100px; background-color:#F475C8;">BLOCK</div>
+		<div id="move" style="height:50px; width: 200px; background-color:#F475C8;">BLOCK</div>
 		<button  id="press">DOLOR</button>
 		<img src="images/myownself.png" alt="Juanes" width="300" height="300" id="blurme">
 		<button id="hide">Hide</button>
 		<button id="show">Show</button>
 		<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam minus, eaque dolorum odit nesciunt temporibus aut molestias ab labore. Sint.</p>
-		<p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam minus, eaque dolorum odit nesciunt temporibus aut molestias ab labore. Sint.</p>
-		<p id="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam minus, eaque dolorum odit nesciunt temporibus aut molestias ab labore. Sint.</p>
 	</section>
 </body>
 <script src= "beetroot.js"></script>
 <script src="jquery-3.3.1.min.js"></script>
 <script>
 $(document).ready(function(){
-	$('#moveable').mouseenter(function(){
-	$(this).css("color","blue").slideDown(2000);
+	$('#move').mouseenter(function(){
+	$(this).css("color","red").slideUp(2000);
 		});
 	
 	$('#blurme').mouseenter(function(){
@@ -41,6 +39,10 @@ $(document).ready(function(){
     $("#show").click(function(){
         $("p").show();
     });
+	
+	$("press").click(function(){
+    $("wow").animate({left: '250px'});
+});
 });
 </script>
 </html>
