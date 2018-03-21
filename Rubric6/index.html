@@ -7,30 +7,40 @@
 </head>
 
 <body>
-<div id="container">
-	<header>'tis I, the frenchiest fry</header>
-		<section>
-		<ul>
-			<li><a data-id="filmstext" id="films" href="#">FILMS</a></li>
-			<li><a data-id="bookstext" id="books" href="#">BOOKS</a></li>
-			<li><a data-id="comicstext" id="comics" href="#">COMICS</a></li>
-		</ul>
-	<p class="hide" id="filmstext">The Dark Crystal | Summer Wars | Big Fish | Moonrise Kingdom | The Last Mimzy</p>
-	<p class="hide" id="bookstext">Kids of Appetite | Greenglass House | Paper Towns | The Outsiders | The Little Prince | Into the Wild</p>
-	<p class="hide" id="comicstext">Bone | Seconds | Lost at Sea | Barbarous | Kiwi Blitz</p>
+	<header>his name is Snart</header>
+	<section>
+		<div id="moveable" style="height:45px; width: 100px; background-color:#F475C8;">BLOCK</div>
+		<button  id="press">DOLOR</button>
+		<img src="images/myownself.png" alt="Juanes" width="300" height="300" id="blurme">
+		<button id="hide">Hide</button>
+		<button id="show">Show</button>
+		<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam minus, eaque dolorum odit nesciunt temporibus aut molestias ab labore. Sint.</p>
+		<p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam minus, eaque dolorum odit nesciunt temporibus aut molestias ab labore. Sint.</p>
+		<p id="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam minus, eaque dolorum odit nesciunt temporibus aut molestias ab labore. Sint.</p>
 	</section>
-</div>
 </body>
 <script src= "beetroot.js"></script>
 <script src="jquery-3.3.1.min.js"></script>
 <script>
 $(document).ready(function(){
+	$('#moveable').mouseenter(function(){
+	$(this).css("color","blue").slideDown(2000);
+		});
 	
-	
-});	
-	
+	$('#blurme').mouseenter(function(){
+	$(this).fadeTo("fast", .5);
+		});
 
+	$('#blurme').mouseleave(function(){
+	$(this).fadeTo("slow", 1.0);
+		});
 	
-	
+	$("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
 </script>
 </html>
