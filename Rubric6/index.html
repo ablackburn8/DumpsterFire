@@ -22,7 +22,11 @@
 <script>
 $(document).ready(function(){
 	$('#move').mouseenter(function(){
-	$(this).css("color","red").slideUp(2000);
+	$(this).css("color","blue").slideUp(2000);
+		});
+	
+	$('#move').mouseleave(function(){
+	$(this).css("color","green").slideDown(2000);
 		});
 	
 	$('#blurme').mouseenter(function(){
